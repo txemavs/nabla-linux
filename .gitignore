@@ -1,0 +1,22 @@
+# Image / packaging artefacts
+*.img
+*.img.xz
+*.iso
+*.deb
+*.ddeb
+*.tar.gz
+*.zip
+.cache/
+build/
+out/
+dist/
+*.log
+
+# Python / local
+__pycache__/
+.venv/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db

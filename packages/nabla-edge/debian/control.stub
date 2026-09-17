@@ -1,0 +1,13 @@
+Source: nabla-edge
+Section: net
+Priority: optional
+Maintainer: Nabla <it@nabla.link>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+
+Package: nabla-edge
+Architecture: all
+Depends: ${misc:Depends}
+Description: Minimal Nabla Edge — join Nabla Net from an existing Linux/Pi OS install
+ Lightweight package (vpn-mode helpers, Tailscale assist, light firstboot).
+ Full disk images live under Nabla OS (see images/).
