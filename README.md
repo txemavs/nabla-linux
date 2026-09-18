@@ -1,27 +1,35 @@
 # Nabla Linux
 
-Product home for **Nabla OS** and **Nabla Edge**.
+Product home for **Nabla OS** — full disk images for Raspberry Pi and Desktop.
 
-| Piece | What it is |
-|-------|------------|
-| **Nabla OS** | Full disk image: Pi flavour (Raspberry Pi OS + Nabla layer) and Desktop flavour (Linux Mint + same layer). |
-| **Nabla Edge** | Minimal `.deb` / package you install on an existing Pi OS or Linux box to join **Nabla Net** (vpn-mode, Tailscale helpers, firstboot hooks). |
+| Deliverable | Description |
+|-------------|-------------|
+| **Nabla OS Pi** | Full disk image: Raspberry Pi OS with the Nabla layer pre-installed. |
+| **Nabla OS Desktop** | Full disk image: Linux Mint with the same Nabla layer. |
 
-Public docs and downloads will live at [nabla.net/linux](https://nabla.net/linux). Apt packages are published under `/linux/apt` (mirror of the fleet apt on Coco). Base OS updates still come from Raspberry Pi / Mint / Ubuntu repos; this repo only carries Nabla packages.
+Public docs and downloads live at [nabla.net/linux](https://nabla.net/linux). Apt packages are published under `/linux/apt` (mirror of the fleet apt). Base OS updates come from upstream distro repos (Raspberry Pi OS / Mint / Ubuntu); this repo documents the Nabla-specific layer that sits on top.
 
-## Layout (planned)
+## Layout
 
 ```
-packages/nabla-edge/   # minimal Edge package
-images/                # image build scripts (Pi + Desktop)
-profiles/              # core, inference (NVIDIA), kiosk, …
-docs/                  # site content for nabla.net/linux
-apt/                   # notes / CI for apt publish (not the binary pool)
+images/      # image build scripts (Pi + Desktop)
+profiles/    # core, inference (NVIDIA), kiosk, …
+docs/        # site content for nabla.net/linux
+apt/         # notes / CI for apt publishing (not the binary pool)
 ```
+
+## Installing Nabla Edge on an existing system
+
+If you have an existing Raspberry Pi OS or Linux box and want to join **Nabla Net** without reflashing, install the **Nabla Edge** package from the apt repository. Edge provides vpn-mode, Tailscale helpers, and firstboot hooks.
+
+Edge package sources and development live in a separate repository:
+**[txemavs/nabla-edge](https://github.com/txemavs/nabla-edge)**
 
 ## Related
 
-- Fleet / Edge runtime: `txemavs/nabla-edge` (may fold package sources here over time)
-- Packages share: `\\coco\nabla.net\`
+| Resource | Link |
+|----------|------|
+| Nabla Edge (package sources + runtime) | [txemavs/nabla-edge](https://github.com/txemavs/nabla-edge) |
+| Apt mirror / fleet packages | `nabla.net/linux/apt` |
 
-Product UI and on-device strings: clear professional English. Chat with operators may be Spanish.
+Product UI and on-device strings: clear professional English. Operator chat may be Spanish.
