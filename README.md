@@ -33,3 +33,7 @@ Edge package sources and development live in a separate repository:
 | Apt mirror / fleet packages | `nabla.net/linux/apt` |
 
 Product UI and on-device strings: clear professional English. Operator chat may be Spanish.
+
+## Contributing
+
+> **IMPORTANT: Rule zero.** Look first and reuse: before building any new system, helper, path or format, search this repo and the other Nabla repos and reuse or extend what exists. No parallel systems, no stopgap fixes; fix the root cause in the shared generic path. See [AGENTS.md](AGENTS.md).
